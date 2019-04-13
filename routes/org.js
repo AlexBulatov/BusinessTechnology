@@ -11,6 +11,10 @@ router.get('/:id', function (req, res, next) {
    res.send('respond with function: ' + req.params.id);
 });
 
+router.get('/titles', function (req, res, next) {
+    res.send('respond all titles');
+});
+
 
 
 module.exports = router;
