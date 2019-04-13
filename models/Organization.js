@@ -14,8 +14,8 @@ const Organization = new Schema(
         inn: String,
         developments: String, //For Company
         branch: String, // For Company
-        portfolio: [String],
-        personnel: Number
+        portfolio: [String], //For R&D
+        personnel: Number //For R&D
     }
 );
 
