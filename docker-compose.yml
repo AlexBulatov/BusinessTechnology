@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    container_name: business
+    restart: always
+    build: ./
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    environment:
+      - DATABASE_HOST=mongodb
+    volumes:
+      - .:/app
+    links:
+      - mongodb
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
