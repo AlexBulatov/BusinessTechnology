@@ -10,7 +10,7 @@ const User = new Schema(
         secondname: String,
         email: String,
         telephone: String,
-        org: String,
+        org: String
     }
 );
 

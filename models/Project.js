@@ -1,10 +1,13 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
-const Project = new Schema(
+let Project = new Schema(
     {
         title: String,
-        stakeholder: String,
+        stakeholder: {
+                title: String,
+                orgtype: String
+        },
         description: String,
         techtask: String,
         budget: Number,
@@ -13,4 +16,4 @@ const Project = new Schema(
     }
 );
 
-module.exports = mongoose.model("projects", Project);
+module.exports = mongoose.model('projects', Project);
